@@ -177,4 +177,43 @@ h1 span :nth-child(8) {
             filter: blur 0;
     opacity: 1;
   }
+}
+.text {
+  position: absolute;
+  top: 111px;
+  left: 100px;
+  width: 600px;
+  height: 600px;
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+  overflow: hidden;
+}
+
+.text::before {
+  display: block;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  content: "01/01/2000";
+  -webkit-animation: slide-text 1s 3s forwards;
+          animation: slide-text 1s 3s forwards;
+}
+
+@-webkit-keyframes slide-text {
+  from {
+    top: -60px;
+  }
+  to {
+    top: 10px;
+  }
+}
+
+@keyframes slide-text {
+  from {
+    top: -60px;
+  }
+  to {
+    top: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
